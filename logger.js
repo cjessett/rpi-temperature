@@ -8,7 +8,7 @@ const logger = winston.createLogger({
   level: 'info',
   format: winston.format.cli({ colors: { info: 'green' }}),
   defaultMeta: { service: 'user-service' },
-  transport: [
+  transports: [
     new winston.transports.File({ filename: errorLog, level: 'error' }),
     new winston.transports.File({ filename: combinedLog }),
   ],
