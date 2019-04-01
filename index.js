@@ -6,7 +6,7 @@ const logger = require('./logger');
 
 require('dotenv').config();
 
-const board = new five.Board({ io: new Raspi() });
+const board = new five.Board({ io: new Raspi(), repl: false });
 
 const { keyPath, certPath, caPath, clientId, host, debug, thingName } = process.env;
 const config = { keyPath, certPath, caPath, clientId, host, debug };
